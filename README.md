@@ -57,8 +57,8 @@ Add new users or manage existing users.
 
 Project Structure:-
 
-catalystmedia/
-├── catalystmedia/
+catalystcount/
+├── catalystcount/
 │   ├── __init__.py
 │   ├── celery.py
 │   ├── settings.py
