@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}Query Builder{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <h2>Query Builder</h2>
+        <form method="get">
+            {% csrf_token %}
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="name">Name</label>
+                    {{ form.name }}
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="year_founded">Year Founded</label>
+                    {{ form.year_founded }}
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="industry">Industry</label>
+                    {{ form.industry }}
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="locality">Locality</label>
+                    {{ form.locality }}
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="country">Country</label>
+                    {{ form.country }}
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Query Data</button>
+            <a href="{% url 'query_builder' %}" class="btn btn-secondary">Reset</a>
+        </form>
+        {% if results_count is not None %}
+            <div class="alert alert-success mt-3">
+                {{ results_count }} records found for the query
+            </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
