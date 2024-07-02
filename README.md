@@ -1,4 +1,4 @@
-# Catalyst Media
+# CSV Query Wizard
 
 Catalyst Media is a Django-based web application that allows users to upload large CSV files, perform data queries, and manage users. The application uses Celery for background processing and Redis as the message broker.
 
